@@ -6,15 +6,14 @@ class Player
   def initialize(name)
     @name = name
     @lives = 3
-    @turn = true # check!
+    @turn = true
   end
 
   # Take a turn and change turn. If lost (!win), loses a life. 
-  def take_turn(win)
+  def count_lives(win)
     if !win
       self.lives -= 1
     end
-    self.turn = self.turn ? false : true
   end
 
 end

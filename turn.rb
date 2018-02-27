@@ -18,28 +18,27 @@
 
 require './question'
 require './player'
-require 'io/console'
-require 'io/wait'
 
 class Turn
   attr_accessor :question, :player
   
   def initialize(player)
     @question = Question.new
-    @player = Player.new(player) # Change this after create in the Game class
+    @player = player
   end
 
   # Print the question (get from the Question and the answer) and the player that get form the game
   def play
-
+    puts ""
+    puts "----- NEW TURN -----"
     print "#{self.player.name}: #{self.question.ask}\n> "
     attempt = gets.chomp.to_i
     if self.question.test_answer(attempt) # Convert to interger
       puts "#{self.player.name}: YES! You are correct"
-      self.player.take_turn( win = true )
+      self.player.count_lives( win = true )
     else
       puts "#{self.player.name}: Seriously? No!"
-      self.player.take_turn( win = false )
+      self.player.count_lives( win = false )
     end
     
   end
