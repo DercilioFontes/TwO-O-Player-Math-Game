@@ -7,6 +7,6 @@
 ## Instruction
 
 Run:
-```rb
+```ruby
 ruby main.rb
 ```
