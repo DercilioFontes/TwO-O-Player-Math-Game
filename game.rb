@@ -1,23 +1,3 @@
-# Example prompt
-# Player 1: What does 5 plus 3 equal?
-# > 9
-# Player 1: Seriously? No!
-# P1: 2/3 vs P2: 3/3
-# ----- NEW TURN -----
-# Player 2: What does 2 plus 6 equal?
-# > 8
-# Player 2: YES! You are correct.
-# P1: 2/3 vs P2: 3/3
-# ----- NEW TURN -----
-# ... some time later ...
-# Player 1 wins with a score of 1/3
-# ----- GAME OVER -----
-# Good bye!
-
-
-
-# 2 players take turns to answer simple math addition problems
-# The game doesn’t end until one of the players loses all their lives. At this point, the game should announce who won and what the other player’s score is.
 require './player'
 require './turn'
 
@@ -27,7 +7,10 @@ class Game
   def initialize
     @player1 = Player.new('Player 1')
     @player2 = Player.new('Player 2')
+  end
 
+  def play
+    self.check_and_game
   end
 
   # Make a match and change the turn between players
@@ -72,7 +55,3 @@ class Game
   end
   
 end
-
-g1 = Game.new
-
-g1.check_and_game
