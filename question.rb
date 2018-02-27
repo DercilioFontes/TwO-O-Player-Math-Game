@@ -24,7 +24,7 @@ class Question
     @n2 = rand(19) + 1
   end
 
-  def question
+  def ask
     "What does #{self.n1} plus #{self.n2} equal?"
   end
 

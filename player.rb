@@ -1,9 +1,10 @@
 # The player must answer correctly or lose a life.
 
 class Player
-  attr_accessor :lives, :turn
+  attr_accessor :name, :lives, :turn
 
-  def initialize
+  def initialize(name)
+    @name = name
     @lives = 3
     @turn = true # check!
   end
