@@ -40,8 +40,6 @@ class MathGame
 end
 
 
-
-# new math question is generated for each turn by picking 2 numbers between 1 and 20
 # At the end of every turn, the game should output the new scores for both players, so players know where they stand.
 class Turn
   
@@ -56,16 +54,3 @@ class Turn
 
 end
 
-
-class Question
-  def initialize
-    n1 = Math.random
-    n2 = 
-  end
-
-  def question
-  end
-
-  def test_answer(attempt)
-  end
-end
