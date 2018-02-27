@@ -38,19 +38,3 @@ class MathGame
   end
   
 end
-
-
-# At the end of every turn, the game should output the new scores for both players, so players know where they stand.
-class Turn
-  
-  def initialize(player)
-    question = new Question
-    
-  end
-
-  def play
-    # Print the question (get from the Question and the answer) and the player that get form the game
-  end
-
-end
-
